@@ -1,0 +1,33 @@
+{
+    "name": "Mobile SDK Ruby Server Sample",
+    "description": "A sample ruby server backend supporting client applications that integrate with Talkdesk Media Sessions",
+    "repository": "https://github.com/Talkdesk/mobile-sdk-ruby-server-sample",
+    "image": "heroku/ruby",
+    "env": {
+        "TD_ACCOUNT_NAME": {
+            "description": "Your Talkdesk account name"
+        },
+        "TD_CLIENT_ID": {
+            "description": "Talkdesk Credential, Client ID registered for this application"
+        },
+        "TD_KEY_ID": {
+            "description": "Talkdesk Credential, Key ID"
+        },
+        "TD_PRIVATE_KEY": {
+            "description": "Talkdesk Credential, Private Key matching the Key ID"
+        },
+        "DEFAULT_USER": {
+            "description": "The username for the sample user.",
+            "value": "app-user"
+        },
+        "DEFAULT_PASSWORD": {
+          "description": "The password for the Sample user.",
+          "generator": "secret"
+        }    
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-ruby"
+    }
+  ]
+}

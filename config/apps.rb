@@ -13,6 +13,6 @@ module Registry
   end
 
   APPS = {
-    '1' => IOSApp.new('com.example.app')
+    'example-app-ios' => IOSApp.new('com.example.app')
   }.freeze
 end
