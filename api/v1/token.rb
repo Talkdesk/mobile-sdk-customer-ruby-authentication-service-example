@@ -11,8 +11,7 @@ module APIv1
     format :json
 
     desc 'Request a new token',
-         success: { code: 201, message: 'Created authorization (access token) for application' },
-         failure: { code: 404, message: 'No such application' }
+         success: { code: 201, message: 'Created authorization (access token) for application' }
 
     params do
       requires :app_id, type: String
