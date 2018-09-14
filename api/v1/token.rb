@@ -18,7 +18,11 @@ module APIv1
     end
 
     http_basic do |username, password|
-      { ENV['DEFAULT_USERNAME'] => ENV['DEFAULT_PASSWORD'] }[username] == password
+      if username.nil? || password.nil?
+        false
+      else
+        { ENV['DEFAULT_USERNAME'] => ENV['DEFAULT_PASSWORD'] }[username] == password
+      end
     end
 
     post '/token/:app_id/' do
