@@ -28,7 +28,7 @@ ENV['TD_PRIVATE_KEY'] ||= raise ArgumentError,
 # Sample User Configuration
 # - - - - - - - -
 
-ENV['DEFAULT_USER'] ||= raise ArgumentError,
+ENV['DEFAULT_USERNAME'] ||= raise ArgumentError,
                                   'Default username required '\
                                   '(or proper auth implementation)'
 
