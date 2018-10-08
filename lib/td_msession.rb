@@ -29,7 +29,7 @@ module TD
         response_object['access_token']
       else
         raise TDMediaSessionError,
-              "Unable to Fetch Access Token for 'mediasession:execute', ",
+              "Unable to Fetch Access Token for 'media-sessions:execute', ",
               "error '#{response_object['error']}'"
       end
     end
