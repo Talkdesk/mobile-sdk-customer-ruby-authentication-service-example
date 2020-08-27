@@ -17,7 +17,7 @@ module TD
       client_assertion = TD::Signed.jwt(oauth_endpoint)
       response = Net::HTTP.post_form(URI(oauth_endpoint),
                                      'grant_type' => 'client_credentials',
-                                     'scope' => 'media-sessions:execute',
+                                     'scope' => 'visual-sessions:execute',s
                                      'client_id' => ENV['TD_CLIENT_ID'],
                                      'client_assertion_type' => 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer',
                                      'client_assertion' => client_assertion)
@@ -29,7 +29,7 @@ module TD
         response_object['access_token']
       else
         raise TDMediaSessionError,
-              "Unable to Fetch Access Token for 'media-sessions:execute', ",
+              "Unable to Fetch Access Token for 'visual-sessions:execute', ",
               "error '#{response_object['error']}'"
       end
     end
